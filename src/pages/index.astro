@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/AboutHome.astro';
+import Expertise from '../components/Expertise.astro';
+import Quote from '../components/Quote.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout>
+  <Navbar />
+  <main class="flex-grow">
+    <Hero />
+    <About />
+    <Expertise />
+    <Quote />
+  </main>
+  <Footer />
+</Layout>

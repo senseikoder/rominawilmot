@@ -1,0 +1,6 @@
+
+# Estándares
+/node_modules
+/.astro
+/dist
+/public

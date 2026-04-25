@@ -1,0 +1,183 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>RW Consulting | Empowering Healthcare &amp; Human Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&amp;family=Open+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#001B44", // Deep Navy Blue
+                        "secondary": "#FF6B00", // Vibrant Sunset Orange
+                        "accent-orange": "#FF8C33",
+                        "on-background": "#1A1A1A",
+                        "surface": "#F8FAFC",
+                        "surface-container": "#F1F5F9"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        "headline": ["Montserrat", "sans-serif"],
+                        "body": ["Open Sans", "sans-serif"],
+                        "label": ["Montserrat", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body { 
+                @apply font-body bg-white text-on-background antialiased; 
+            }
+            h1, h2, h3, h4 { 
+                @apply font-headline text-primary; 
+            }
+        }
+        .text-display-lg { font-size: 3.5rem; line-height: 1.1; letter-spacing: -0.02em; font-weight: 800; }
+        .text-display-md { font-size: 2.5rem; line-height: 1.2; letter-spacing: -0.01em; font-weight: 700; }
+        .text-body-lg { font-size: 1.125rem; line-height: 1.6; }
+        .text-label-md { font-size: 0.875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; }
+        .cta-button { 
+            @apply bg-secondary text-white px-8 py-4 rounded-full font-bold transition-all duration-300 hover:bg-accent-orange hover:shadow-lg hover:shadow-secondary/20 active:scale-95;
+        }
+        .nav-button {
+            @apply bg-primary text-white px-6 py-2 rounded-full font-bold text-sm transition-all duration-300 hover:bg-primary/90;
+        }
+        .ambient-shadow { box-shadow: 0 20px 40px rgba(0, 27, 68, 0.08); }
+        .ghost-border { border: 1px solid rgba(0, 27, 68, 0.08); }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+<nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl rounded-full bg-white/90 backdrop-blur-md shadow-xl shadow-primary/5 flex justify-between items-center px-8 py-4 z-50 transition-all border border-slate-100">
+<div class="text-2xl font-extrabold text-primary tracking-tighter" style="">RW Consulting</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-primary border-b-2 border-secondary pb-1 font-headline tracking-tight font-bold text-sm" href="#" style="">Home</a>
+<a class="text-slate-500 hover:text-primary font-headline tracking-tight font-bold text-sm transition-colors" href="#" style="">Consulting</a>
+<a class="text-slate-500 hover:text-primary font-headline tracking-tight font-bold text-sm transition-colors" href="#" style="">About</a>
+</div>
+<button class="nav-button" style="">
+            Contact Us
+        </button>
+</nav>
+<main class="flex-grow">
+<section class="relative min-h-[870px] flex items-center justify-center pt-24 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Boston Skyline" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrN7ICFTCcQ8nSqpUCQdPQjN5mh3An6_EqtUTkn_a3kNz2EymJFUnHXcym4tGRcZ1yrK6tgd8iALChyKQpYB-Qc4nOETg0gPyYq1HvDRNkzyHdOqu0VvjxJY-n9Y3s-pp-Yz31RruPfJv033e3-dJI60hZ_cQZlvDdSvp1P1paPhY-bRxalMbHG3rFeU6EUhCNMViAMGnsJ45oDYCsdgRaUma1F8FZijiKROeTrQ2I0DgMaoBode3mnXmn9u1rO-MQ6BodT7Tqc8c" style="filter: brightness(0.6);">
+<div class="absolute inset-0 bg-primary/40 mix-blend-multiply"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 w-full text-center">
+<span class="text-label-md text-secondary mb-6 block" style="">The Human Architect</span>
+<h1 class="text-display-lg text-white mb-8 max-w-4xl mx-auto" style="">Empowering Healthcare &amp; Human Services</h1>
+<p class="text-body-lg text-white/90 mb-12 max-w-2xl mx-auto font-medium" style="">We design the structures that support human life and community well-being, moving beyond advice to actionable architecture.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="cta-button" style="">
+                        Start Building
+                    </button>
+<button class="px-8 py-4 rounded-full font-bold text-lg text-white border-2 border-white/50 hover:bg-white/10 transition-all duration-300" style="">
+                        Learn More
+                    </button>
+</div>
+</div>
+</section>
+<section class="py-32 bg-white">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="text-display-md mb-6" style="">Bridging the Gap Between Care and Community.</h2>
+<p class="text-body-lg text-slate-600 mb-8" style="">We don't just consult; we architect relationships. By deeply understanding the nuances of healthcare and human services, we forge lasting connections that elevate organizational impact and community health.</p>
+<a class="inline-flex items-center text-secondary font-bold hover:text-primary transition-colors group" href="#" style="">
+                            Discover Our Approach 
+                            <span class="material-symbols-outlined ml-2 transition-transform group-hover:translate-x-1" style="color: var(--secondary);">arrow_forward</span>
+</a>
+</div>
+<div class="relative">
+<div class="absolute -inset-4 bg-surface-container rounded-xl -z-10 transform rotate-2"></div>
+<img alt="Healthcare Professionals Collaborating" class="rounded-xl shadow-2xl w-full h-[450px] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwkBsFysuTicjIf3qhXgx0uKqAhzhhhmMf0ApKcGcwNviqnoqeiYWGsdwUzx-LFzZLKB4lJSfBYswr3vFIuN9XCE0XKOu1gVYsYyuYznhZYscFcoR6L_i-MXhmWt7X2J48nBMAQyLLHJYifsN6wVLdTCv13A9ZIP_c0JUX7iwfLFPHY3F1e0Bk7guDmHT49qP1-j6YS_AHfqo5NAmw6DDlQdbh7VhI7ECYPBJct2RaoAvMOyxdF-WxdjP7W-Ie8LF44sfSZiJVvEg" style="">
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 bg-surface-container">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-16">
+<span class="text-label-md text-secondary mb-4 block" style="">Our Expertise</span>
+<h2 class="text-display-md" style=""><h3 style="color: #1798e3;text-align: center">We can help you engage with...</h3></h2>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="bg-white rounded-xl p-10 ambient-shadow border-t-4 border-secondary hover:transform hover:-translate-y-1 transition-transform duration-300">
+<span class="material-symbols-outlined text-4xl text-secondary mb-6 block" style="">handshake</span>
+<h3 class="text-2xl font-bold mb-4" style="">Medical Partners</h3>
+<p class="text-slate-600" style="">Forging strategic alliances with medical professionals to enhance service delivery and community reach.</p>
+</div>
+<div class="bg-white rounded-xl p-10 ambient-shadow border-t-4 border-secondary hover:transform hover:-translate-y-1 transition-transform duration-300">
+<span class="material-symbols-outlined text-4xl text-secondary mb-6 block" style="">groups</span>
+<h3 class="text-2xl font-bold mb-4" style="">Community Outreach</h3>
+<p class="text-slate-600" style="">Designing impactful programs that connect directly with the populations you serve, fostering trust and engagement.</p>
+</div>
+<div class="bg-white rounded-xl p-10 ambient-shadow border-t-4 border-secondary hover:transform hover:-translate-y-1 transition-transform duration-300">
+<span class="material-symbols-outlined text-4xl text-secondary mb-6 block" style="">campaign</span>
+<h3 class="text-2xl font-bold mb-4" style="">Media Relations</h3>
+<p class="text-slate-600" style="">Crafting compelling narratives that elevate your authority and communicate your vital mission to the public.</p>
+</div>
+<div class="bg-white rounded-xl p-10 ambient-shadow border-t-4 border-secondary hover:transform hover:-translate-y-1 transition-transform duration-300">
+<span class="material-symbols-outlined text-4xl text-secondary mb-6 block" style="">devices</span>
+<h3 class="text-2xl font-bold mb-4" style="">Online Tools</h3>
+<p class="text-slate-600" style="">Implementing sophisticated digital architectures to streamline operations and enhance patient/client interaction.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 bg-white">
+<div class="max-w-7xl mx-auto px-8">
+<div class="bg-primary rounded-[2rem] overflow-hidden shadow-2xl">
+<div class="grid md:grid-cols-2">
+<div class="relative h-[500px] md:h-auto">
+<img alt="Healthcare Leader in Urban Setting" class="absolute inset-0 w-full h-full object-cover" src="https://rominawilmot.com/wp-content/uploads/2020/03/MWP-7_mod.jpg" style="">
+<div class="absolute inset-0 bg-primary/20"></div>
+</div>
+<div class="p-12 md:p-20 flex flex-col justify-center bg-primary text-white">
+<h2 class="text-display-md text-white mb-6 leading-tight" style="">"Engagement is about relationships."</h2>
+<p class="text-body-lg text-white/80 mb-10" style="">At the core of every successful initiative is a human connection. We believe that lasting impact in healthcare requires more than strategy—it requires profound empathy and active relationship building.</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-1 bg-secondary rounded-full"></div>
+<span class="font-bold text-white tracking-wide" style="">Romina Wilmot, Founder</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-slate-50 border-t border-slate-200">
+<div class="max-w-7xl mx-auto px-8 py-16 flex flex-col md:flex-row justify-between items-start gap-12">
+<div>
+<div class="text-2xl font-black text-primary mb-6" style="">RW Consulting</div>
+<p class="font-body text-sm leading-relaxed text-slate-500 max-w-sm" style="">
+                    © 2024 RW Consulting. Designed for Community Well-being. All rights reserved.
+                </p>
+</div>
+<div class="flex flex-col sm:flex-row gap-12 sm:gap-24">
+<div class="flex flex-col gap-4">
+<h4 class="text-xs font-bold uppercase tracking-widest text-slate-400" style="">Legal</h4>
+<a class="text-slate-600 hover:text-secondary transition-colors font-body text-sm" href="#" style="">Privacy Policy</a>
+<a class="text-slate-600 hover:text-secondary transition-colors font-body text-sm" href="#" style="">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-xs font-bold uppercase tracking-widest text-slate-400" style="">Social</h4>
+<a class="text-slate-600 hover:text-secondary transition-colors font-body text-sm" href="#" style="">LinkedIn</a>
+<a class="text-slate-600 hover:text-secondary transition-colors font-body text-sm" href="#" style="">Contact</a>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>

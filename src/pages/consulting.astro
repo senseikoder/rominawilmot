@@ -1,0 +1,272 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import ConsultingHero from "../components/ConsultingHero.astro";
+import ContactForm from "../components/ContactForm.astro";
+import consultingBg from "../assets/consulting-bg-romina.webp";
+---
+
+<Layout>
+  <Navbar />
+  <main class="flex-grow">
+    <ConsultingHero />
+
+    <!-- Blue Insight Section -->
+    <section class="bg-primary py-20 text-white">
+      <div
+        class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
+      >
+        <div>
+          <h2 class="font-headline text-4xl font-bold mb-6">
+            Innovative Health Solutions
+          </h2>
+          <p class="text-xl font-body opacity-90 leading-relaxed">
+            Our unique background and versatile experiences on both healthcare
+            provider sales and community relations are what sets us apart from
+            other community liaisons.
+          </p>
+
+          <p class="text-xl font-body opacity-90 leading-relaxed mt-4">
+            Increase visibility and growth while impacting the health outcomes
+            and literacy of communities that lack knowledge and resources.
+          </p>
+        </div>
+        <div class="bg-white/10 p-8 rounded-xl backdrop-blur-md">
+          <h3 class="font-headline text-2xl font-bold mb-6 text-white">
+            Are you a...
+          </h3>
+          <ul class="space-y-4">
+            <li class="flex items-center gap-4">
+              <span
+                class="material-symbols-outlined text-orange-300"
+                style="font-variation-settings: 'FILL' 1;">check_circle</span
+              >
+              <span class="font-body text-lg"
+                >Hospital or Healthcare Providers</span
+              >
+            </li>
+            <li class="flex items-center gap-4">
+              <span
+                class="material-symbols-outlined text-orange-300"
+                style="font-variation-settings: 'FILL' 1;">check_circle</span
+              >
+              <span class="font-body text-lg">Payers</span>
+            </li>
+            <li class="flex items-center gap-4">
+              <span
+                class="material-symbols-outlined text-orange-300"
+                style="font-variation-settings: 'FILL' 1;">check_circle</span
+              >
+              <span class="font-body text-lg">Rehabs</span>
+            </li>
+            <li class="flex items-center gap-4">
+              <span
+                class="material-symbols-outlined text-orange-300"
+                style="font-variation-settings: 'FILL' 1;">check_circle</span
+              >
+              <span class="font-body text-lg">Adult Day Health programs</span>
+            </li>
+            <li class="flex items-center gap-4">
+              <span
+                class="material-symbols-outlined text-orange-300"
+                style="font-variation-settings: 'FILL' 1;">check_circle</span
+              >
+              <span class="font-body text-lg">PACE</span>
+            </li>
+            <li class="flex items-center gap-4">
+              <span
+                class="material-symbols-outlined text-orange-300"
+                style="font-variation-settings: 'FILL' 1;">check_circle</span
+              >
+              <span class="font-body text-lg">Senior Care organizations</span>
+            </li>
+            <li class="flex items-center gap-4">
+              <span
+                class="material-symbols-outlined text-orange-300"
+                style="font-variation-settings: 'FILL' 1;">check_circle</span
+              >
+              <span class="font-body text-lg">Home Care Agencies</span>
+            </li>
+            <li class="flex items-center gap-4">
+              <span
+                class="material-symbols-outlined text-orange-300"
+                style="font-variation-settings: 'FILL' 1;">check_circle</span
+              >
+              <span class="font-body text-lg">Community Health Centers</span>
+            </li>
+            <li class="flex items-center gap-4">
+              <span
+                class="material-symbols-outlined text-orange-300"
+                style="font-variation-settings: 'FILL' 1;">check_circle</span
+              >
+              <span class="font-body text-lg">Human Services organizations</span
+              >
+            </li>
+            <li class="flex items-center gap-4">
+              <span
+                class="material-symbols-outlined text-orange-300"
+                style="font-variation-settings: 'FILL' 1;">check_circle</span
+              >
+              <span class="font-body text-lg"
+                >Others looking to engage better with diverse communities</span
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-48 relative">
+      <div class="absolute inset-0 z-0">
+        <img src={consultingBg.src} alt="" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-white/30"></div>
+      </div>
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="mb-16 text-center max-w-3xl mx-auto">
+          <span
+            class="font-label text-primary font-bold uppercase tracking-[0.2em] text-sm"
+            >Our Expertise</span
+          >
+          <h2
+            class="font-headline text-4xl font-extrabold text-on-background mt-4"
+          >
+            Engage with
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 gap-y-12">
+            <div
+              class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow border-b-4 border-transparent hover:border-primary group"
+            >
+              <div
+                class="mb-6 inline-flex p-6 rounded-lg bg-sky-50 text-secondary group-hover:scale-110 transition-transform"
+              >
+                <span
+                  class="material-symbols-outlined text-4xl"
+                  style="font-variation-settings: 'FILL' 1;">handshake</span
+                >
+              </div>
+              <h3
+                class="font-headline text-xl font-bold mb-4 text-on-background"
+              >
+                Medical Providers &amp; Referral Partners
+              </h3>
+              <p class="text-slate-600 font-body text-sm leading-relaxed">
+                Increase visibility with providers in the community and expand your referrals sources. Fuel growth through strategic partners to ensure a foundation of sustainable and predictable growth.
+              </p>
+            </div>
+            <div
+              class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow border-b-4 border-transparent hover:border-primary group"
+            >
+              <div
+                class="mb-6 inline-flex p-6 rounded-lg bg-sky-50 text-secondary group-hover:scale-110 transition-transform"
+              >
+                <span
+                  class="material-symbols-outlined text-4xl"
+                  style="font-variation-settings: 'FILL' 1;"
+                  >groups</span
+                >
+              </div>
+              <h3
+                class="font-headline text-xl font-bold mb-4 text-on-background"
+              >
+                Community Outreach and Engagement
+              </h3>
+              <p class="text-slate-600 font-body text-sm leading-relaxed">
+                Let's strategize on how to build on the great work already being done locally and develop new initiatives to meet the challenges.
+              </p>
+            </div>
+            <div
+              class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow border-b-4 border-transparent hover:border-primary group"
+            >
+              <div
+                class="mb-6 inline-flex p-6 rounded-lg bg-sky-50 text-secondary group-hover:scale-110 transition-transform"
+              >
+                <span
+                  class="material-symbols-outlined text-4xl"
+                  style="font-variation-settings: 'FILL' 1;">campaign</span
+                >
+              </div>
+              <h3
+                class="font-headline text-xl font-bold mb-4 text-on-background"
+              >
+                Media Relations, PR, and Events
+              </h3>
+              <p class="text-slate-600 font-body text-sm leading-relaxed">
+                Leverage relationships with the media to partner for events and attract more people and increase visibility.
+              </p>
+            </div>
+            <div
+              class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow border-b-4 border-transparent hover:border-primary group"
+            >
+              <div
+                class="mb-6 inline-flex p-6 rounded-lg bg-sky-50 text-secondary group-hover:scale-110 transition-transform"
+              >
+                <span
+                  class="material-symbols-outlined text-4xl"
+                  style="font-variation-settings: 'FILL' 1;">devices</span
+                >
+              </div>
+              <h3
+                class="font-headline text-xl font-bold mb-4 text-on-background"
+              >
+                Online Tools
+              </h3>
+              <p class="text-slate-600 font-body text-sm leading-relaxed">
+              Use online tools and social media to communicate with a wide audience and provide education and localize your content so people know where to find your services
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="bg-secondary py-20 overflow-hidden relative">
+      <div
+        class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12 text-center"
+      >
+        <div class="md:col-span-12">
+          <div
+            class="mb-6 inline-flex p-6 rounded-lg bg-sky-50 text-secondary group-hover:scale-110 transition-transform"
+          >
+            <span
+              class="material-symbols-outlined text-4xl"
+              style="font-variation-settings: 'FILL' 1;">video_call</span
+            >
+          </div>
+          <h2
+            class="font-headline text-5xl font-extrabold text-white mb-8 leading-tight"
+          >
+            Set up a virtual meet and greet
+          </h2>
+          <div
+            class="text-white/90 max-w-2xl mx-auto font-body text-lg leading-relaxed space-y-4"
+          >
+            <p>
+              In this meeting we will talk about your needs and your goals, and
+              set next steps that will help your organization engage with
+              patients and providers in a much more authentic manner.
+            </p>
+          </div>
+
+          <div class="mt-10">
+            <a
+              href="/first-step"
+              class="inline-flex items-center gap-2 px-8 py-4 bg-primary text-on-primary font-body font-semibold rounded-full hover:bg-primary/90 transition-colors"
+            >
+              Schedule a call
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <ContactForm />
+  </main>
+  <Footer />
+</Layout>
