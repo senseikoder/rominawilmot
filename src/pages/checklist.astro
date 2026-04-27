@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout>
+  <Navbar />
+  <main class="flex-growpb-20">
+    <header class="py-16">
+      <div class="max-w-4xl mx-auto px-6">
+        &nbsp;
+      </div>
+    </header>
+    <div class="max-w-2xl mx-auto p-8">
+      <div class="bg-white rounded-2xl shadow-xl p-10 my-24">
+        <div class="text-center mb-10">
+          <span class="text-label-md text-secondary mb-4 block">Free Download</span>
+          <h1 class="text-display-md text-primary mb-4">Healthcare Engagement Checklist</h1>
+          <p class="text-slate-600">Download our free checklist to evaluate your organization's patient engagement strategy.</p>
+        </div>
+
+        <form class="space-y-6">
+          <div class="space-y-2">
+       
+            <input class="w-full bg-surface-container border border-slate-200 rounded-lg p-4 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all font-body" placeholder="Your name" type="text" required />
+          </div>
+          <div class="space-y-2">
+  
+            <input class="w-full bg-surface-container border border-slate-200 rounded-lg p-4 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all font-body" placeholder="your@email.com" type="email" required />
+          </div>          
+          
+          <button class="w-full bg-secondary text-white py-4 rounded-xl font-bold text-lg hover:bg-accent-orange transition-all shadow-lg hover:shadow-secondary/20" type="submit">
+            Download Checklist
+          </button>
+          <p class="text-xs text-slate-500 text-center">We respect your privacy. Unsubscribe at any time.</p>
+        </form>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Layout>
