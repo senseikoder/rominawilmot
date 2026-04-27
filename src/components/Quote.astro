@@ -1,15 +1,17 @@
 ---
+import Image from 'astro/components/Image.astro';
+import quoteImage from '../assets/romina-wilmot-quote.webp';
 ---
 <section class="py-32 bg-white">
   <div class="max-w-7xl mx-auto px-8">
     <div class="bg-primary rounded-[2rem] overflow-hidden shadow-2xl">
       <div class="grid md:grid-cols-2">
         <div class="relative h-[500px] md:h-auto">
-          <img alt="Healthcare Leader in Urban Setting" class="absolute inset-0 w-full h-full object-cover" src="https://rominawilmot.com/wp-content/uploads/2020/03/MWP-7_mod.jpg">
+          <Image alt="Healthcare Leader in Urban Setting" class="absolute inset-0 w-full h-full object-cover" src={quoteImage} />
           <div class="absolute inset-0 bg-primary/20"></div>
         </div>
-        <div class="p-12 md:p-20 flex flex-col justify-center bg-primary text-white">
-          <h2 class="text-display-md text-white mb-6 leading-tight">"Engagement is about relationships."</h2>
+        <div class="p-8 md:p-20 flex flex-col justify-center bg-primary text-white">
+          <h2 class="text-display-md text-white mb-6 leading-tight">"Engagement is about relationships"</h2>
           <p class="text-body-lg text-white/80 mb-10">At the core of every successful initiative is a human connection. We believe that lasting impact in healthcare requires more than strategy—it requires profound empathy and active relationship building.</p>
           <div class="flex items-center gap-4">
             <div class="w-12 h-1 bg-secondary rounded-full"></div>
