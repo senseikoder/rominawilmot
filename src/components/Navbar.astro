@@ -3,10 +3,12 @@ import logo from '../assets/logo_romina_wilmot.webp';
 const pathname = new URL(Astro.request.url).pathname;
 const isActive = (path: string) => pathname === path || (path !== '/' && pathname.startsWith(path));
 ---
-<nav class="absolute top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl rounded-full bg-white/85 backdrop-blur-xs shadow-xl shadow-primary/5 flex justify-between items-center px-8 py-4 z-50 transition-all border border-slate-100">
-  <a href="/" class="w-24 ml-8">
+
+<nav class="absolute top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl rounded-full bg-white/85 backdrop-blur-xs shadow-xl shadow-primary/5 flex justify-between items-center px-4 md:px-8 py-3 md:py-4 z-50 transition-all border border-slate-100">
+  <a href="/" class="w-20 md:w-24 ml-2 md:ml-8">
     <img src={logo.src} alt="RW Consulting" class="w-full h-auto" />
   </a>
+  
   <div class="hidden md:flex items-center gap-8">
     <a class:list={[
       "border-b-2 pb-1 font-headline tracking-tight font-bold text-md transition-colors",
@@ -21,7 +23,76 @@ const isActive = (path: string) => pathname === path || (path !== '/' && pathnam
       isActive('/about') ? "border-secondary text-primary" : "border-transparent text-slate-500 hover:text-primary"
     ]} href="/about">About</a>
   </div>
-  <a href="mailto:contact@rominawilmot.com" class="bg-primary text-white px-6 py-2 rounded-full font-bold text-md transition-all duration-300 hover:bg-secondary/90">
+
+  <a href="mailto:contact@rominawilmot.com" class="hidden md:inline-block bg-primary text-white px-6 py-2 rounded-full font-bold text-md transition-all duration-300 hover:bg-secondary/90">
     Contact
   </a>
+
+  <button id="mobile-menu-btn" class="md:hidden p-2 text-primary" aria-label="Toggle menu">
+    <span class="material-symbols-outlined text-2xl">menu</span>
+  </button>
 </nav>
+
+<div id="mobile-menu" class="fixed inset-0 z-[60] hidden">
+  <div id="mobile-menu-overlay" class="absolute inset-0 bg-white/30 backdrop-blur-sm opacity-0 transition-opacity duration-300"></div>
+  <div id="mobile-menu-panel" class="absolute top-0 right-0 h-full w-72 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-out">
+    <div class="flex flex-col h-full pt-6 px-6">
+      <button id="mobile-menu-close" class="absolute top-6 right-6 p-2 text-primary" aria-label="Close menu">
+        <span class="material-symbols-outlined text-3xl">close</span>
+      </button>
+      <nav class="flex flex-col gap-6 mt-16">
+        <a class:list={[
+          "text-xl font-headline font-bold",
+          isActive('/') ? "text-primary" : "text-slate-700"
+        ]} href="/">Home</a>
+        <a class:list={[
+          "text-xl font-headline font-bold",
+          isActive('/consulting') ? "text-primary" : "text-slate-700"
+        ]} href="/consulting">Consulting</a>
+        <a class:list={[
+          "text-xl font-headline font-bold",
+          isActive('/about') ? "text-primary" : "text-slate-700"
+        ]} href="/about">About</a>
+        
+      </nav>
+      <a href="mailto:contact@rominawilmot.com" class="mt-auto mb-8 bg-primary text-white px-6 py-4 rounded-full font-bold text-lg text-center">
+        Contact Us
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const menuClose = document.getElementById('mobile-menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const overlay = document.getElementById('mobile-menu-overlay');
+    const panel = document.getElementById('mobile-menu-panel');
+
+    function openMenu() {
+      mobileMenu?.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => {
+        overlay?.classList.remove('opacity-0');
+        panel?.classList.remove('translate-x-full');
+      }, 10);
+    }
+
+    function closeMenu() {
+      overlay?.classList.add('opacity-0');
+      panel?.classList.add('translate-x-full');
+      setTimeout(() => {
+        mobileMenu?.classList.add('hidden');
+        document.body.style.overflow = '';
+      }, 300);
+    }
+
+    menuBtn?.addEventListener('click', openMenu);
+    menuClose?.addEventListener('click', closeMenu);
+
+    mobileMenu?.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+  });
+</script>
